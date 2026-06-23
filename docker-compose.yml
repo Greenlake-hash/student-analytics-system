@@ -1,0 +1,39 @@
+version: "3.9"
+
+# Local development only. Production uses Neon Postgres (see backend/.env.example).
+# Run: docker compose up -d
+# Stop: docker compose down
+# Wipe and start fresh: docker compose down -v
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: spad_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: spad
+      POSTGRES_PASSWORD: spad_dev_password
+      POSTGRES_DB: spad_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - spad_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spad -d spad_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Optional lightweight DB browser, useful while building the schema.
+  # Visit http://localhost:8081 (server: db, user: spad, password: spad_dev_password, db: spad_dev)
+  adminer:
+    image: adminer:4.8.1
+    container_name: spad_adminer
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+
+volumes:
+  spad_pgdata:

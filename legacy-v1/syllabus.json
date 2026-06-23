@@ -1,0 +1,218 @@
+[
+  {
+    "code": "DA101",
+    "overview": "Develops listening, speaking, reading, vocabulary, grammar, and academic writing skills for professional communication.",
+    "topics": ["effective listening", "academic lectures", "formal and informal speaking", "group discussions", "reading comprehension", "vocabulary building", "grammar", "summaries", "paraphrasing", "short reports"],
+    "recommendedBooks": ["V. Sasikumar et al., A Course in Listening and Speaking I, Cambridge University Press, 2006", "Raymond Murphy, English Grammar in Use, Cambridge University Press, 2019", "Alice Oshima and Ann Hogue, Introduction to Academic Writing, Pearson Longman, 2007"]
+  },
+  {
+    "code": "DA102",
+    "overview": "Introduces data formats, cleaning, wrangling, descriptive statistics, spreadsheets, visualization, pivot tables, curve fitting, and regression.",
+    "topics": ["structured data", "unstructured data", "csv", "xlsx", "data cleaning", "missing values", "duplicates", "data wrangling", "mean median mode", "variance", "time-series", "charts", "pivot tables", "regression"],
+    "recommendedBooks": ["Wayne Winston, Microsoft Excel Data Analysis and Business Modeling, Pearson, 2022", "Michael Alexander, Richard Kusleika, John Walkenbach, Excel 2019 Bible, Wiley, 2018"]
+  },
+  {
+    "code": "DA103",
+    "overview": "Covers probability, random variables, probability functions, expectations, moments, multivariate distributions, covariance, correlation, and limit theorems.",
+    "topics": ["probability", "random variables", "pmf", "pdf", "expectation", "moments", "moment generating functions", "joint distributions", "conditional expectation", "covariance", "correlation", "law of large numbers", "central limit theorem"],
+    "recommendedBooks": ["Hogg, McKean and Craig, Introduction to Mathematical Statistics, Pearson, 2012", "Rice, Mathematical Statistics and Data Analysis, Cengage, 2006"]
+  },
+  {
+    "code": "DA104",
+    "overview": "Builds foundations in C programming, data types, operators, control flow, functions, recursion, arrays, pointers, structures, input/output, and files.",
+    "topics": ["c program structure", "data types", "operators", "conditional statements", "loops", "functions", "recursion", "pointers", "arrays", "structures", "scanf", "printf", "file access"],
+    "recommendedBooks": ["Kernighan and Ritchie, The C Programming Language, Pearson, 2015", "Byron S. Gottfried, Programming with C, McGraw Hill, 2018"]
+  },
+  {
+    "code": "DA105",
+    "overview": "Studies systems of equations, matrices, vector spaces, linear transformations, eigenvalues, inner products, QR factorization, SVD, and matrix calculus.",
+    "topics": ["linear equations", "gaussian elimination", "rank", "inverse", "determinant", "vector spaces", "basis", "dimension", "linear transformations", "eigenvalues", "diagonalization", "gram-schmidt", "qr factorization", "svd"],
+    "recommendedBooks": ["David Poole, Linear Algebra: A Modern Introduction, Cengage, 2014", "Seymour Lipschutz and Marc Lars Lipson, Linear Algebra, McGraw Hill, 2009"]
+  },
+  {
+    "code": "DA106",
+    "overview": "Introduces the data science workflow from collection and curation to cleaning, exploration, model building, validation, evaluation, and applications.",
+    "topics": ["data science workflow", "data collection", "multimodal data", "xml", "json", "sql basics", "data cleaning", "eda", "missing values", "outlier detection", "linear regression", "bayes classifier", "model evaluation"],
+    "recommendedBooks": ["Rafael A. Irizarry, Introduction to Data Science, CRC Press, 2019", "Hui Lin and Ming Li, Practitioner's Guide to Data Science, Chapman & Hall/CRC, 2023"]
+  },
+  {
+    "code": "DA107",
+    "overview": "Explains computer architecture, CPU/GPU basics, operating systems, file systems, shell programming, device drivers, system monitoring, package management, and user administration.",
+    "topics": ["computer architecture", "cpu", "gpu", "operating systems", "boot process", "file systems", "shell programming", "device drivers", "resource monitoring", "storage management", "network settings", "package management"],
+    "recommendedBooks": ["Joan Lambert and Steve Lambert, Windows 10 Step by Step, Microsoft Press, 2015", "Mark Sobell and Matthew Helmke, A Practical Guide to Linux Commands, Editors, and Shell Programming, Addison-Wesley, 2017"]
+  },
+  {
+    "code": "DA108",
+    "overview": "Covers Python variables, data types, control flow, lists, dictionaries, sets, functions, recursion, classes, exceptions, and file handling.",
+    "topics": ["python variables", "data types", "operators", "conditional statements", "loops", "lists", "dictionaries", "sets", "functions", "recursion", "classes", "exceptions", "file handling"],
+    "recommendedBooks": ["Charles Dierbach, Introduction to Computer Science using Python, Wiley, 2015", "Mark Lutz, Learning Python, O'Reilly Media, 2013", "Wes McKinney, Python for Data Analysis, O'Reilly Media, 2012"]
+  },
+  {
+    "code": "DA109",
+    "overview": "Surveys artificial intelligence, intelligent agents, search, logic, knowledge representation, planning, uncertainty, supervised learning, unsupervised learning, reinforcement learning, and applications.",
+    "topics": ["intelligent agents", "uninformed search", "informed search", "propositional logic", "first order logic", "knowledge representation", "planning", "uncertainty", "probabilistic reasoning", "supervised learning", "reinforcement learning"],
+    "recommendedBooks": ["Russell and Norvig, Artificial Intelligence: A Modern Approach, Pearson, 2020", "Sutton and Barto, Reinforcement Learning: An Introduction, MIT Press, 2018"]
+  },
+  {
+    "code": "DA110",
+    "overview": "Builds algorithmic data-structure foundations with arrays, stacks, queues, linked lists, trees, heaps, sorting, searching, balanced trees, graphs, BFS, DFS, and hashing.",
+    "topics": ["abstract data types", "arrays", "stacks", "queues", "linked lists", "binary trees", "heaps", "merge sort", "quick sort", "binary search trees", "avl trees", "red-black trees", "graphs", "bfs", "dfs", "hashing"],
+    "recommendedBooks": ["Goodrich, Tamassia and Goldwasser, Data Structures and Algorithms in Python, Wiley, 2013", "Mark Allen Weiss, Data Structures and Algorithm Analysis in C++, Pearson, 2014"]
+  },
+  {
+    "code": "DA111",
+    "overview": "Covers asymptotic analysis, sorting, searching, greedy methods, divide and conquer, dynamic programming, amortized analysis, graph traversal, MST, shortest paths, and max flow.",
+    "topics": ["asymptotic notation", "time complexity", "space complexity", "linear time sorting", "quicksort", "greedy algorithms", "divide and conquer", "dynamic programming", "amortized analysis", "connected components", "topological sort", "minimum spanning trees", "shortest paths", "max flow"],
+    "recommendedBooks": ["Cormen, Leiserson, Rivest and Stein, Introduction to Algorithms, PHI, 2009", "Aho, Hopcroft and Ullman, The Design and Analysis of Computer Algorithms, Pearson, 2006"]
+  },
+  {
+    "code": "DA112",
+    "overview": "Introduces R programming, vectors, matrices, operators, missing-data handling, conditionals, loops, functions, lists, factors, strings, data frames, file import/export, and visualization.",
+    "topics": ["r", "rstudio", "vectors", "matrices", "missing data", "if else", "loops", "functions", "lists", "factors", "strings", "data frames", "csv", "excel", "scatter plots", "bar plots", "histograms"],
+    "recommendedBooks": ["Lafaye de Micheaux, Drouilhet and Liquet, The R Software, Springer, 2013", "Zuur, Ieno and Meesters, A Beginner's Guide to R, Springer, 2009", "Heumann, Schomaker and Shalabh, Introduction to Statistics and Data Analysis with R, Springer, 2016"]
+  },
+  {
+    "code": "DA201",
+    "overview": "Studies relational databases, ER models, relational algebra, SQL, constraints, triggers, storage, indexing, transactions, concurrency, recovery, normalization, administration, connectivity, and NoSQL.",
+    "topics": ["rdbms", "er model", "relational algebra", "sql", "constraints", "triggers", "storage", "indexing", "transactions", "acid", "concurrency control", "crash recovery", "normalization", "nosql"],
+    "recommendedBooks": ["Ramakrishnan and Gehrke, Database Management Systems, McGraw Hill, 2014", "Elmasri and Navathe, Fundamentals of Database Systems, Pearson, 2017", "Garcia-Molina, Ullman and Widom, Database Systems: The Complete Book, Pearson, 2013"]
+  },
+  {
+    "code": "DA202",
+    "overview": "Builds Java programming skills across syntax, data types, control flow, methods, object-oriented concepts, exception handling, collections, files, data structures, GUI, database connectivity, multithreading, networking, and AI libraries.",
+    "topics": ["java", "syntax", "data types", "control flow", "methods", "oop", "exceptions", "collections", "file handling", "arrays", "linked lists", "trees", "graphs", "gui", "jdbc", "multithreading", "networking"],
+    "recommendedBooks": ["Herbert Schildt, Java: The Complete Reference, McGraw-Hill, 2019", "David Kopec, Classic Computer Science Problems in Java, Manning, 2021"]
+  },
+  {
+    "code": "DA203",
+    "overview": "Covers optimization problem formulation, convex sets and functions, unconstrained methods, gradient method, Newton and quasi-Newton methods, simplex, duality, constrained methods, and convex optimization.",
+    "topics": ["optimization", "convex sets", "convex functions", "gradient method", "newton method", "quasi-newton", "linear optimization", "simplex", "duality", "projected gradient", "constrained optimization"],
+    "recommendedBooks": ["Chong and Zak, An Introduction to Optimization, Wiley India, 2017", "Boyd and Vandenberghe, Convex Optimization, Cambridge, 2004"]
+  },
+  {
+    "code": "DA204",
+    "overview": "Reviews random variables and statistical inference for economics, then develops linear regression, least squares, Gauss-Markov theorem, hypothesis testing, model fit, nonlinear models, dummy variables, heteroscedasticity, autocorrelation, multicollinearity, omitted variables, instrumental variables, and binary response models.",
+    "topics": ["econometrics", "random variables", "least squares", "gauss-markov", "hypothesis testing", "goodness of fit", "dummy variables", "heteroscedasticity", "autocorrelation", "multicollinearity", "instrumental variables", "binary response"],
+    "recommendedBooks": ["Jeffrey M. Wooldridge, Introductory Econometrics: A Modern Approach, South-Western, 2020", "Davidson and MacKinnon, Econometric Theory and Methods, Oxford, 2009"]
+  },
+  {
+    "code": "DA205",
+    "overview": "Explores data mining and warehousing through dimensional modeling, ETL, similarity, locality-sensitive hashing, frequent pattern mining, graph mining, clustering, and data-stream mining.",
+    "topics": ["data mining", "data warehousing", "dimensional modeling", "star schema", "etl", "similarity measures", "locality-sensitive hashing", "frequent patterns", "graph mining", "link analysis", "graph clustering", "data streams", "concept drift"],
+    "recommendedBooks": ["Han, Pei and Tong, Data Mining: Concepts and Techniques, Morgan Kaufmann, 2022", "Robinson, Webber and Eifrem, Graph Databases, O'Reilly, 2015", "Ponniah, Data Warehousing Fundamentals, Wiley, 2012"]
+  },
+  {
+    "code": "DA206",
+    "overview": "Develops statistical inference through point estimation, properties of estimators, MLE, Fisher information, confidence intervals, bootstrap, hypothesis testing, likelihood ratio tests, Neyman-Pearson lemma, Bayesian inference, MAP, and Bayesian least squares.",
+    "topics": ["point estimation", "unbiasedness", "consistency", "sufficiency", "mle", "fisher information", "cramer rao bound", "confidence intervals", "bootstrap", "hypothesis testing", "likelihood ratio", "bayesian inference", "map"],
+    "recommendedBooks": ["Larry Wasserman, All of Statistics, Springer, 2004", "Pishro-Nik, Introduction to Probability, Statistics, and Random Processes, Kappa Research, 2014", "Bertsekas and Tsitsiklis, Introduction to Probability, Athena Scientific, 2008"]
+  },
+  {
+    "code": "DA207",
+    "overview": "Introduces continuous-time and discrete-time signals, signal operations, signal spaces, Fourier series, Fourier transform, sampling, discrete-time Fourier transform, DFT, system properties, LTI systems, impulse response, convolution, and frequency response.",
+    "topics": ["signals", "continuous-time", "discrete-time", "signal space", "fourier series", "fourier transform", "sampling theorem", "aliasing", "dft", "lti systems", "impulse response", "convolution", "frequency response"],
+    "recommendedBooks": ["B. P. Lathi, Principles of Linear Systems and Signals, Oxford, 2009", "H. Hsu and R. Rajan, Signals and Systems, Schaum Series, 2017"]
+  },
+  {
+    "code": "DA208",
+    "overview": "Covers social media content, crawling ethics and APIs, text analysis, tokenization, lemmatization, retrieval, social graph analytics, influence, ranking, and applied social media analytics.",
+    "topics": ["social media analytics", "data crawling", "apis", "ethics", "tokenization", "lemmatization", "text analysis", "information retrieval", "social graphs", "influence", "ranking", "analytics applications"],
+    "recommendedBooks": ["Manning, Raghavan and Schutze, Introduction to Information Retrieval, Cambridge, 2008", "Subodha Kumar and Liangfei Qiu, Social Media Analytics and Practical Applications"]
+  },
+  {
+    "code": "DA209",
+    "overview": "Focuses on dataset structure, data models, data preparation, visual perception, visualization guidelines, coordinate systems, dashboard design, visual encodings, and effective data storytelling.",
+    "topics": ["data modeling", "entities", "attributes", "relationships", "data types", "dataset structure", "data preparation", "visual perception", "visualization guidelines", "coordinate systems", "dashboard design", "visual storytelling"],
+    "recommendedBooks": ["Harry J. Foxwell, Creating Good Data, Apress, 2020", "Claus O. Wilke, Fundamentals of Data Visualization, O'Reilly, 2019"]
+  },
+  {
+    "code": "DA210",
+    "overview": "Introduces time-series data, trends, differencing, stationary processes, linear time-series models, estimation, diagnostics, smoothing, ARIMA-style modeling, and practical forecasting.",
+    "topics": ["time series", "trend", "least squares estimation", "differencing", "stationarity", "linear processes", "forecasting", "model diagnostics", "smoothing", "arima", "prediction intervals"],
+    "recommendedBooks": ["Brockwell and Davis, Introduction to Time Series and Forecasting, Springer, 2002", "Hyndman and Athanasopoulos, Forecasting: Principles and Practice"]
+  },
+  {
+    "code": "DA261",
+    "overview": "Builds core machine-learning concepts across supervised and unsupervised learning, generative and discriminative models, feature vectors, Gaussian distributions, Bayesian classification, regression, clustering, and model evaluation.",
+    "topics": ["supervised learning", "unsupervised learning", "generative models", "discriminative models", "feature vectors", "gaussian distribution", "bayes classifier", "regression", "classification", "clustering", "model evaluation"],
+    "recommendedBooks": ["Ethem Alpaydin, Introduction to Machine Learning, Prentice Hall, 2015", "Duda, Hart and Stork, Pattern Classification, Wiley, 2006"]
+  },
+  {
+    "code": "DA262",
+    "overview": "Studies recommender-system techniques including nearest-neighbor methods, association rules, content-based filtering, collaborative filtering, matrix factorization, SVD, alternating least squares, ranking, and evaluation.",
+    "topics": ["recommender systems", "nearest neighbors", "association rules", "content-based filtering", "collaborative filtering", "matrix factorization", "svd", "als", "ranking", "recommendation evaluation"],
+    "recommendedBooks": ["Charu C. Aggarwal, Recommender Systems: The Textbook, Springer, 2016", "Jannach, Zanker and Felfernig, Recommender Systems: An Introduction, Cambridge, 2011"]
+  },
+  {
+    "code": "DA301",
+    "overview": "Covers cloud fundamentals, distributed systems, service-oriented and event-driven architecture, SaaS, PaaS, IaaS, virtualization, deployment, storage, security, monitoring, and cloud-native design.",
+    "topics": ["computer networks", "distributed systems", "cloud computing", "soa", "event-driven architecture", "saas", "paas", "iaas", "virtualization", "cloud storage", "security", "monitoring"],
+    "recommendedBooks": ["N. B. Ruparelia, Cloud Computing, MIT Press, 2023", "Thomas Erl and Eric Barcelo Monroy, Cloud Computing: Concepts, Technology, Security and Architecture, Pearson, 2024"]
+  },
+  {
+    "code": "DA302",
+    "overview": "Introduces deep learning concepts such as multilayer perceptrons, backpropagation, activations, losses, gradient methods, CNNs, regularization, sequence models, and deployment considerations.",
+    "topics": ["deep learning", "mlp", "backpropagation", "activation functions", "loss functions", "gradient descent", "momentum", "rmsprop", "adam", "cnn", "regularization", "sequence models"],
+    "recommendedBooks": ["Goodfellow, Bengio and Courville, Deep Learning, MIT Press, 2016", "Michael Nielsen, Neural Networks and Deep Learning, 2015"]
+  },
+  {
+    "code": "DA354",
+    "overview": "Connects wireless communication foundations with supervised, unsupervised, reinforcement-learning, and deep-learning techniques for communication systems.",
+    "topics": ["wireless communication", "physical layer", "mac layer", "network layer", "supervised learning", "unsupervised learning", "reinforcement learning", "deep neural networks", "ai for communication systems"],
+    "recommendedBooks": ["Textbooks to be updated in official syllabus"]
+  },
+  {
+    "code": "DA361",
+    "overview": "Studies time value of money, bond valuation, yield, duration, convexity, equity valuation, portfolio risk and return, diversification, and portfolio analytics.",
+    "topics": ["time value of money", "discounting", "bond valuation", "yield", "duration", "convexity", "stock valuation", "portfolio risk", "return", "diversification", "portfolio analytics"],
+    "recommendedBooks": ["Textbooks to be updated in official syllabus"]
+  },
+  {
+    "code": "DA303",
+    "overview": "Develops responsible AI judgment through fairness metrics, bias mitigation, explainability, privacy, surveillance, autonomous systems, accountability, global governance, and generative AI ethics.",
+    "topics": ["ai ethics", "fairness metrics", "pre-processing methods", "in-processing methods", "explainability", "privacy", "surveillance", "autonomous systems", "accountability", "labor displacement", "healthcare ethics", "education ethics", "generative ai", "global ai governance"],
+    "recommendedBooks": ["Barocas, Hardt and Narayanan, Fairness and Machine Learning", "Additional references to be updated in official syllabus"]
+  },
+  {
+    "code": "DA326",
+    "overview": "Applies deep learning to computer vision through image-processing review, CNNs, encoder-decoder models, detection, recognition, segmentation, inpainting, super-resolution, depth estimation, and vision applications.",
+    "topics": ["computer vision", "image processing", "cnn", "backpropagation", "encoder-decoder", "detection", "recognition", "segmentation", "inpainting", "super-resolution", "depth estimation"],
+    "recommendedBooks": ["Richard Szeliski, Computer Vision: Algorithms and Applications, Springer, 2022", "Goodfellow, Bengio and Courville, Deep Learning, MIT Press, 2016"]
+  },
+  {
+    "code": "DAO3021",
+    "overview": "Explores deep-learning systems with automatic differentiation, neural-network libraries, parallel programming, hardware parallelism, CPU/GPU/microcontroller tradeoffs, quantization, pruning, and efficient deployment.",
+    "topics": ["deep learning systems", "automatic differentiation", "parallel programming", "gpu", "cpu", "microcontrollers", "quantization", "pruning", "model compression", "hardware-aware optimization"],
+    "recommendedBooks": ["Andres Rodriguez, Deep Learning Systems, Morgan & Claypool, 2021", "Simon J. D. Prince, Understanding Deep Learning"]
+  },
+  {
+    "code": "DAO3062",
+    "overview": "Connects digital manufacturing and data science through 3D printing technologies, process planning, additive manufacturing data, monitoring, quality control, optimization, and AI-enabled production.",
+    "topics": ["3d printing", "additive manufacturing", "process planning", "liquid-based 3d printing", "sheet-based 3d printing", "wire-based 3d printing", "powder-based 3d printing", "manufacturing analytics", "quality control"],
+    "recommendedBooks": ["L. Jyothish Kumar, Pulak M. Pandey and David Ian Wimpenny, 3D Printing and Additive Manufacturing Technologies, Springer, 2019", "Ian Gibson, David Rosen and Brent Stucker, Additive Manufacturing Technologies"]
+  },
+  {
+    "code": "DAO3063",
+    "overview": "Builds leadership capability through leadership theory, emotional intelligence, leadership styles, leader-member exchange, change and crisis leadership, conflict management, feedback, persuasion, and motivation.",
+    "topics": ["leadership", "leadership vs management", "trait theory", "behavioral theory", "contingency theory", "emotional intelligence", "transformational leadership", "servant leadership", "change leadership", "conflict management", "360 feedback", "motivation"],
+    "recommendedBooks": ["Northouse, Leadership: Theory and Practice, Sage, 2022", "Yukl, Leadership in Organizations, Pearson, 2020", "Kouzes and Posner, The Leadership Challenge, Wiley, 2017"]
+  },
+  {
+    "code": "DAO3022",
+    "overview": "Provides hands-on LLM application engineering with tokens, context windows, inference APIs, prompt engineering, structured outputs, tool calling, guardrails, LangChain workflows, RAG, routing, agents, tracing, and CrewAI-style agent teams.",
+    "topics": ["large language models", "tokens", "context windows", "inference apis", "prompt engineering", "structured outputs", "tool calling", "guardrails", "langchain", "rag", "routing", "multi-agent patterns", "crewai", "evaluation", "fine-tuning"],
+    "recommendedBooks": ["Official textbook list to be updated; syllabus emphasizes practical LLM application engineering"]
+  },
+  {
+    "code": "DAO3065",
+    "overview": "Applies AI to drug discovery with molecular representation, force fields, structure prediction, binding-site analysis, ADMET prediction, docking, virtual screening, molecular dynamics, and open-source AI/ML resources.",
+    "topics": ["drug discovery", "molecular representation", "force fields", "molecular visualization", "structure prediction", "binding site analysis", "admet", "molecular docking", "virtual screening", "molecular dynamics", "open-source ai"],
+    "recommendedBooks": ["Noah Flynn, Machine Learning for Drug Discovery, Manning, 2024", "Abhirup Khanna and May El Barachi, Artificial Intelligence and Machine Learning in Drug Discovery"]
+  },
+  {
+    "code": "DAO3023",
+    "overview": "Applies machine learning to signal processing with audio and physiological signals, time-frequency representations, preprocessing, feature engineering, representation learning, multimodal learning, speech analysis, healthcare monitoring, and brain-computer interfaces.",
+    "topics": ["audio signals", "physiological signals", "ecg", "eeg", "segmentation", "windowing", "spectrogram", "scalogram", "mfcc", "signal preprocessing", "feature engineering", "representation learning", "multimodal learning", "speech analysis", "healthcare monitoring", "brain-computer interfaces"],
+    "recommendedBooks": ["Official textbook list to be updated; syllabus emphasizes applied ML for audio and physiological signals"]
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "code": "DA101",
+    "name": "Basic English",
+    "trimester": 1,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["communication", "writing", "language"],
+    "defaultAssessment": [
+      { "name": "Practice Tasks", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Speaking/Writing Labs", "count": 4, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA102",
+    "name": "Data Analysis Basics",
+    "trimester": 1,
+    "creditPattern": "2-0-4-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["excel", "data-cleaning", "visualization"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 35 },
+      { "name": "Lab Assignments", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Final Project", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA103",
+    "name": "Introduction to Statistics",
+    "trimester": 1,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["probability", "statistics", "random-variables"],
+    "defaultAssessment": [
+      { "name": "Quizzes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Problem Sets", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA104",
+    "name": "C Programming",
+    "trimester": 1,
+    "creditPattern": "2-0-4-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["c", "programming", "systems"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Programming Labs", "count": 8, "maxMarks": 20, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA105",
+    "name": "Linear Algebra",
+    "trimester": 2,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["matrices", "vector-spaces", "svd"],
+    "defaultAssessment": [
+      { "name": "PT", "count": 6, "maxMarks": 30, "weight": 45 },
+      { "name": "NPT", "count": 6, "maxMarks": 10, "weight": 15 },
+      { "name": "ST", "count": 2, "maxMarks": 100, "weight": 40 }
+    ]
+  },
+  {
+    "code": "DA106",
+    "name": "Data Science: An Introduction",
+    "trimester": 2,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["data-science", "eda", "models"],
+    "defaultAssessment": [
+      { "name": "PT", "count": 6, "maxMarks": 30, "weight": 40 },
+      { "name": "NPT", "count": 6, "maxMarks": 10, "weight": 15 },
+      { "name": "Mini Project", "count": 1, "maxMarks": 100, "weight": 45 }
+    ]
+  },
+  {
+    "code": "DA107",
+    "name": "Computer System Tools",
+    "trimester": 2,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["linux", "shell", "operating-systems"],
+    "defaultAssessment": [
+      { "name": "PT", "count": 5, "maxMarks": 30, "weight": 35 },
+      { "name": "Tool Labs", "count": 6, "maxMarks": 20, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA108",
+    "name": "Python Programming",
+    "trimester": 2,
+    "creditPattern": "2-0-4-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["python", "oop", "files"],
+    "defaultAssessment": [
+      { "name": "PT", "count": 6, "maxMarks": 30, "weight": 30 },
+      { "name": "Coding Labs", "count": 8, "maxMarks": 20, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA109",
+    "name": "AI Basics",
+    "trimester": 3,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["ai", "search", "agents"],
+    "defaultAssessment": [
+      { "name": "Quizzes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Assignments", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA110",
+    "name": "Data Structures",
+    "trimester": 3,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["data-structures", "graphs", "trees"],
+    "defaultAssessment": [
+      { "name": "Coding PT", "count": 5, "maxMarks": 30, "weight": 35 },
+      { "name": "Assignments", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 40 }
+    ]
+  },
+  {
+    "code": "DA111",
+    "name": "Algorithm Design & Analysis",
+    "trimester": 3,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["algorithms", "complexity", "graphs"],
+    "defaultAssessment": [
+      { "name": "Problem Tests", "count": 5, "maxMarks": 30, "weight": 35 },
+      { "name": "Assignments", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 40 }
+    ]
+  },
+  {
+    "code": "DA112",
+    "name": "Introduction to R",
+    "trimester": 3,
+    "creditPattern": "2-0-4-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["r", "statistics", "visualization"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "R Labs", "count": 8, "maxMarks": 20, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA201",
+    "name": "Relational Database Management Systems",
+    "trimester": 4,
+    "creditPattern": "3-0-3-9",
+    "credits": 9,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["sql", "databases", "transactions"],
+    "defaultAssessment": [
+      { "name": "SQL Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Theory Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DA202",
+    "name": "Java Programming",
+    "trimester": 4,
+    "creditPattern": "2-0-4-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["java", "oop", "collections"],
+    "defaultAssessment": [
+      { "name": "Coding Labs", "count": 8, "maxMarks": 20, "weight": 40 },
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DA203",
+    "name": "Optimization",
+    "trimester": 4,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["optimization", "convexity", "linear-programming"],
+    "defaultAssessment": [
+      { "name": "Quizzes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Problem Sets", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA204",
+    "name": "Basic Econometrics",
+    "trimester": 4,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["econometrics", "regression", "inference"],
+    "defaultAssessment": [
+      { "name": "Quizzes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Case Assignments", "count": 4, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA205",
+    "name": "Data Mining and Warehousing",
+    "trimester": 5,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["data-mining", "warehousing", "graphs"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Mining Project", "count": 1, "maxMarks": 100, "weight": 30 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 40 }
+    ]
+  },
+  {
+    "code": "DA206",
+    "name": "Statistical Inferencing",
+    "trimester": 5,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["inference", "mle", "hypothesis-testing"],
+    "defaultAssessment": [
+      { "name": "Quizzes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Problem Sets", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 50 }
+    ]
+  },
+  {
+    "code": "DA207",
+    "name": "Signals and Systems",
+    "trimester": 5,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["signals", "fourier", "systems"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Problem Sets", "count": 5, "maxMarks": 25, "weight": 25 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 45 }
+    ]
+  },
+  {
+    "code": "DA208",
+    "name": "Social Media Tools and Techniques",
+    "trimester": 5,
+    "creditPattern": "3-0-2-8",
+    "credits": 8,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["social-media", "nlp", "analytics"],
+    "defaultAssessment": [
+      { "name": "API Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Analytics Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA209",
+    "name": "Data Modeling and Visualization",
+    "trimester": 6,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["visualization", "data-modeling", "dashboards"],
+    "defaultAssessment": [
+      { "name": "Design Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Dashboard Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA210",
+    "name": "Time Series Analysis and Forecasting",
+    "trimester": 6,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["time-series", "forecasting", "arima"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Forecasting Project", "count": 1, "maxMarks": 100, "weight": 30 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 40 }
+    ]
+  },
+  {
+    "code": "DA261",
+    "name": "Machine Learning Fundamentals",
+    "trimester": 6,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["machine-learning", "classification", "regression"],
+    "defaultAssessment": [
+      { "name": "ML Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Modeling Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA262",
+    "name": "Recommender Systems",
+    "trimester": 6,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["recommenders", "matrix-factorization", "ranking"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Recommendation Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DA301",
+    "name": "Cloud Computing",
+    "trimester": 7,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["cloud", "distributed-systems", "security"],
+    "defaultAssessment": [
+      { "name": "Cloud Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Architecture Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA302",
+    "name": "Deep Learning Essentials",
+    "trimester": 7,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["deep-learning", "cnn", "optimization"],
+    "defaultAssessment": [
+      { "name": "DL Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Model Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DA354",
+    "name": "AI Based Wireless Communication Systems",
+    "trimester": 7,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["wireless", "ai", "communications"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Simulation Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DA361",
+    "name": "Financial Valuation and Portfolio Analytics",
+    "trimester": 7,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["finance", "valuation", "portfolio"],
+    "defaultAssessment": [
+      { "name": "Case Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Portfolio Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DA303",
+    "name": "Ethics in AI",
+    "trimester": 8,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Compulsory",
+    "instructor": "Faculty (TBA)",
+    "tags": ["ethics", "fairness", "governance"],
+    "defaultAssessment": [
+      { "name": "Reflection Notes", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Case Analysis", "count": 3, "maxMarks": 30, "weight": 30 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 45 }
+    ]
+  },
+  {
+    "code": "DA326",
+    "name": "Deep Learning for Computer Vision",
+    "trimester": 8,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["computer-vision", "cnn", "segmentation"],
+    "defaultAssessment": [
+      { "name": "Vision Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "CV Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DAO3021",
+    "name": "Hardware-Aware Deep Learning",
+    "trimester": 8,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["deep-learning", "hardware", "optimization"],
+    "defaultAssessment": [
+      { "name": "Systems Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Optimization Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DAO3062",
+    "name": "Data Driven Digital Manufacturing",
+    "trimester": 8,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["manufacturing", "3d-printing", "analytics"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Manufacturing Project", "count": 1, "maxMarks": 100, "weight": 35 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 35 }
+    ]
+  },
+  {
+    "code": "DAO3063",
+    "name": "Leadership Essentials",
+    "trimester": 8,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["leadership", "management", "communication"],
+    "defaultAssessment": [
+      { "name": "Case Reflections", "count": 5, "maxMarks": 20, "weight": 25 },
+      { "name": "Team Exercises", "count": 4, "maxMarks": 25, "weight": 30 },
+      { "name": "Final Portfolio", "count": 1, "maxMarks": 100, "weight": 45 }
+    ]
+  },
+  {
+    "code": "DAO3022",
+    "name": "Large Language Model Application Engineering",
+    "trimester": 9,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["llm", "rag", "agents"],
+    "defaultAssessment": [
+      { "name": "LLM Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Application Project", "count": 1, "maxMarks": 100, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 25 }
+    ]
+  },
+  {
+    "code": "DAO3065",
+    "name": "AI Techniques in Drug Discovery",
+    "trimester": 9,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["drug-discovery", "bioinformatics", "machine-learning"],
+    "defaultAssessment": [
+      { "name": "Practice Tests", "count": 5, "maxMarks": 30, "weight": 30 },
+      { "name": "Drug Discovery Project", "count": 1, "maxMarks": 100, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 30 }
+    ]
+  },
+  {
+    "code": "DAO3023",
+    "name": "Applied Machine Learning for Signal Processing",
+    "trimester": 9,
+    "creditPattern": "3-0-0-6",
+    "credits": 6,
+    "type": "Elective",
+    "instructor": "Faculty (TBA)",
+    "tags": ["signal-processing", "machine-learning", "audio"],
+    "defaultAssessment": [
+      { "name": "Signal Labs", "count": 6, "maxMarks": 25, "weight": 35 },
+      { "name": "Applied ML Project", "count": 1, "maxMarks": 100, "weight": 40 },
+      { "name": "End-Term", "count": 1, "maxMarks": 100, "weight": 25 }
+    ]
+  }
+]

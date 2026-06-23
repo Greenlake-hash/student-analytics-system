@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/*
+  Design tokens for SPAD v2.
+
+  Lineage: ported from legacy-v1/styles.css's dark-first palette
+  (teal/amber/rose on near-black) rather than inventing a new identity --
+  this is "Dashboard 2.0," not a rebrand. What's NEW here and didn't exist
+  in v1: the --grade-* ramp. v1 had no relative grading, so it never
+  needed a perceptually-ordered color scale for AA-through-F; that scale
+  is used consistently across grade badges, the histogram, and the bell
+  curve, so a glance at any chart tells you "warm = lower, cool = higher"
+  without reading labels.
+
+  Type: no external font CDN dependency (this sandbox's egress proxy
+  blocks fonts.googleapis.com, and a dashboard with grade data shouldn't
+  flash-of-unstyled-text on first paint anyway) -- a deliberate system
+  stack instead, with a monospace face reserved specifically for anything
+  numeric/tabular (scores, IDs, z-values) to reinforce "this is precise
+  institutional data," distinct from prose UI text.
+*/
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces -- identical values to v1 for visual continuity */
+  --bg: #0f1117;
+  --surface: #171b23;
+  --surface-2: #1f2530;
+  --surface-3: #262e3b;
+  --line: #343d4f;
+  --text: #eef2f7;
+  --muted: #a7b0c0;
+  --faint: #7d8798;
+
+  /* Brand -- identical to v1 */
+  --brand: #2dd4bf;
+  --brand-2: #f59e0b;
+  --info: #60a5fa;
+  --accent: #fb7185;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+
+  /* Grade scale -- NEW in v2. Perceptually ordered warm-to-cool, low-to-high,
+     so every grade-colored element (badges, histogram bars, bell curve
+     fill) reads consistently without a legend. */
+  --grade-aa: #2dd4bf;
+  --grade-ab: #5eead4;
+  --grade-bb: #60a5fa;
+  --grade-bc: #a78bfa;
+  --grade-cc: #fbbf24;
+  --grade-cd: #fb923c;
+  --grade-dd: #fb7185;
+  --grade-f: #ef4444;
+
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  --font-sans:
+    -apple-system, "Segoe UI", Roboto, Inter, system-ui, sans-serif;
+  --font-display:
+    "Segoe UI", -apple-system, Roboto, Inter, system-ui, sans-serif;
+  --font-mono:
+    "SF Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-3: #eef2f7;
+  --line: #d8dee8;
+  --text: #17202c;
+  --muted: #526071;
+  --faint: #66768a;
+  --shadow: 0 16px 42px rgba(15, 23, 42, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "ss01" 1;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand) 32%, transparent);
+}

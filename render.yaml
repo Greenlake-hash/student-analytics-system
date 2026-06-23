@@ -1,0 +1,58 @@
+# Render deployment spec for the SPAD v2 backend (FastAPI + PostgreSQL).
+#
+# Prerequisites before deploying:
+#   1. Create a Neon Postgres database (neon.tech -> New Project).
+#      Copy the "Connection string" from the Neon dashboard.
+#   2. Create a Firebase project, generate a service account key (JSON),
+#      and base64-encode it:
+#        cat firebase-service-account.json | base64 -w0
+#   3. In the Render dashboard, create a new "Web Service" connected to
+#      this repo, then set the environment variables listed below under
+#      envVars. The DATABASE_URL and FIREBASE_CREDENTIALS_JSON must be set
+#      manually (Render's YAML sync doesn't handle secret values).
+#
+# Deploy once the environment variables are set:
+#   render blueprint apply
+# or push to the branch configured as the auto-deploy branch in Render.
+
+services:
+  - type: web
+    name: spad-v2-api
+    runtime: python
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: >
+      alembic upgrade head &&
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port $PORT
+      --workers 1
+      --proxy-headers
+      --forwarded-allow-ips='*'
+    healthCheckPath: /health
+    autoDeploy: true
+
+    envVars:
+      - key: APP_ENV
+        value: production
+
+      - key: FIREBASE_ENABLED
+        value: "true"
+
+      # Set these in the Render dashboard -- do NOT commit real values here.
+      - key: DATABASE_URL
+        sync: false   # Render will prompt for the value on first deploy
+
+      - key: FIREBASE_CREDENTIALS_JSON
+        sync: false   # base64-encoded service account JSON
+
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+
+      # Set to your Vercel/GitHub Pages frontend URL, e.g.:
+      #   https://spad-v2.vercel.app
+      - key: CORS_ORIGINS
+        sync: false

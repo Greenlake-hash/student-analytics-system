@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Performance Analytics Dashboard for GPA, CGPA, syllabus, forecasting, reports, and study recommendations.">
+  <meta property="og:title" content="Student Performance Analytics Dashboard">
+  <meta property="og:description" content="Official evaluation engine, CGPA planner, what-if analysis, syllabus explorer, and portfolio-ready analytics dashboard.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/screenshots/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Performance Analytics Dashboard">
+  <meta name="twitter:description" content="A GitHub Pages-ready student analytics dashboard for BSc Data Science and AI.">
+  <meta name="twitter:image" content="assets/screenshots/social-preview.png">
+  <meta name="theme-color" content="#0f172a">
+  <title>Student Performance Analytics Dashboard</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css?v=10">
+  <script>
+    (function () {
+      var theme = localStorage.getItem("academic-spad-theme") || "dark";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#appRoot">Skip to dashboard content</a>
+  <div class="app-shell">
+    <aside class="app-sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="#dashboard" aria-label="dashboard home">
+        <span class="brand-mark">
+          <img src="assets/icons/icon.svg" alt="" aria-hidden="true">
+        </span>
+        <span>
+          <strong>Student Analytics</strong>
+          <small>BSc DSAI Dashboard</small>
+        </span>
+      </a>
+
+      <nav class="nav-list">
+        <button class="nav-link active" type="button" data-view="dashboard">Dashboard</button>
+        <button class="nav-link" type="button" data-view="calculator">Grade Lab</button>
+        <button class="nav-link" type="button" data-view="comparison">Comparison</button>
+        <button class="nav-link" type="button" data-view="syllabus">Syllabus</button>
+        <button class="nav-link" type="button" data-view="portfolio">Project</button>
+        <button class="nav-link" type="button" data-view="data">Data</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sync-pill">
+          <span class="status-dot"></span>
+          <span>Local Storage</span>
+        </div>
+        <button class="ghost-btn full" type="button" id="installPwaBtn" hidden>Install PWA</button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="appRoot">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">BSc (Hons.) Data Science & AI</p>
+          <h1 id="viewTitle">Student Performance Analytics Dashboard</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="status-pill" id="connectionStatus" aria-live="polite">Checking status</span>
+          <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle theme">Theme</button>
+          <button class="secondary-btn" type="button" id="installPwaTopBtn" hidden>Install</button>
+          <button class="primary-btn" type="button" id="quickExportBtn">Export Report</button>
+        </div>
+      </header>
+
+      <section class="view active" id="dashboard" aria-labelledby="dashboardHeading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Performance Overview</p>
+            <h2 id="dashboardHeading">Academic command center</h2>
+          </div>
+          <div class="profile-chip" id="profileChip">Demo Student</div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span class="metric-label">CGPA</span>
+            <strong id="cgpaMetric">0.00</strong>
+            <small id="cgpaDelta">No trend yet</small>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Completed Credits</span>
+            <strong id="creditsMetric">0</strong>
+            <small id="creditProgress">0 of 228 credit units</small>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Forecast</span>
+            <strong id="forecastMetric">0.00</strong>
+            <small id="forecastDelta">Next trimester projection</small>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Risk Watch</span>
+            <strong id="riskMetric">0</strong>
+            <small id="riskSummary">No low-score courses</small>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Readiness Score</span>
+            <strong id="readinessMetric">0</strong>
+            <small id="readinessSummary">Portfolio readiness</small>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Target SGPA</span>
+            <strong id="targetSgpaMetric">0.00</strong>
+            <small id="targetSgpaSummary">Needed next trimester</small>
+          </article>
+        </div>
+
+        <div class="analytics-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>GPA Trend</h3>
+              <span id="trendStatus">Trimester view</span>
+            </div>
+            <div class="chart-frame"><canvas id="gpaTrendChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>Performance Mix</h3>
+              <span>Grade distribution</span>
+            </div>
+            <div class="chart-frame"><canvas id="gradeMixChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel wide">
+            <div class="panel-head">
+              <h3>Semester Comparison</h3>
+              <span>SGPA and credit load</span>
+            </div>
+            <div class="chart-frame tall"><canvas id="semesterChart"></canvas></div>
+          </article>
+        </div>
+
+        <div class="dashboard-split">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>AI Study Coach</h3>
+              <span>Local analysis</span>
+            </div>
+            <div class="recommendation-list" id="recommendations"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Course Risk Radar</h3>
+              <span id="riskTableCaption">Latest records</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Trimester</th>
+                    <th>Score</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="courseRiskTable"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+
+        <div class="dashboard-split">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Curriculum Progress</h3>
+              <span id="curriculumProgressMeta">0 of 36 courses</span>
+            </div>
+            <div class="progress-block">
+              <div class="progress-track" aria-hidden="true">
+                <span id="curriculumProgressBar"></span>
+              </div>
+              <div class="progress-stats" id="curriculumProgressStats"></div>
+            </div>
+            <div class="mini-course-grid" id="nextCourseGrid"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Academic Health</h3>
+              <span>Signals for reviewers</span>
+            </div>
+            <div class="health-grid" id="healthSignals"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="calculator" aria-labelledby="calculatorHeading">
+        <div class="section-heading grade-lab-heading">
+          <div>
+            <p class="eyebrow">Configuration-Driven Grade Lab</p>
+            <h2 id="calculatorHeading">Grade lab</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="secondary-btn" type="button" id="loadTemplateBtn">Reload Rules</button>
+            <button class="ghost-btn" type="button" id="openRuleManagerBtn" aria-controls="ruleManagerPanel" aria-expanded="false">Rule Manager</button>
+          </div>
+        </div>
+
+        <div class="grade-lab-shell">
+          <div class="grade-lab-main">
+            <article class="panel grade-start-card">
+              <div class="grade-control-grid">
+                <label>
+                  Course Selection
+                  <select id="courseSelect" aria-describedby="courseHelp"></select>
+                  <small id="courseHelp">Pick the course you want to calculate.</small>
+                </label>
+                <label>
+                  Trimester
+                  <select id="recordTrimester" aria-describedby="trimesterHelp"></select>
+                  <small id="trimesterHelp">The active rule set changes automatically.</small>
+                </label>
+                <label>
+                  Target Grade
+                  <select id="targetGradeSelect" aria-describedby="targetGradeHelp"></select>
+                  <small id="targetGradeHelp">Used for progress and what-if planning.</small>
+                </label>
+                <label class="switch-card">
+                  <span>
+                    Beginner Mode
+                    <small>Simple steps, no rule editing.</small>
+                  </span>
+                  <input id="beginnerModeToggle" type="checkbox" role="switch" checked aria-label="Beginner mode">
+                </label>
+              </div>
+            </article>
+
+            <nav class="workflow-steps" id="gradeWorkflowSteps" aria-label="Grade Lab workflow"></nav>
+
+            <article class="panel official-engine-panel">
+              <div class="panel-head">
+                <h3>Current Evaluation Rules</h3>
+                <span id="engineRuleLabel">Loaded from assessment-rules.json</span>
+              </div>
+              <div class="rule-pill-list" id="ruleExplanationList"></div>
+              <details class="definition-disclosure" id="ruleDefinitions">
+                <summary>What these terms mean</summary>
+                <div class="definition-grid" id="definitionGrid"></div>
+              </details>
+              <div class="engine-grid" id="officialBreakdown"></div>
+            </article>
+
+            <div class="assessment-groups" id="assessmentCardGroups" aria-live="polite"></div>
+
+            <article class="panel rule-manager-panel advanced-grade-section" id="ruleManagerPanel" hidden>
+              <div class="panel-head">
+                <div>
+                  <h3>Rule Manager</h3>
+                  <span>Edit local rule behavior and course assessment definitions. Export JSON when official files need updating.</span>
+                </div>
+                <button class="ghost-btn small-btn" type="button" id="closeRuleManagerBtn">Close</button>
+              </div>
+              <h4 class="rule-manager-subtitle">Evaluation Rule</h4>
+              <div class="rule-manager-grid" id="ruleManagerRows"></div>
+              <h4 class="rule-manager-subtitle">Course Assessment Definitions</h4>
+              <div class="course-assessment-manager" id="courseAssessmentRows"></div>
+              <div class="action-row">
+                <button class="secondary-btn" type="button" id="addComponentBtn">Add Best-Of Rule</button>
+                <button class="secondary-btn" type="button" id="addCourseAssessmentBtn">Add Assessment</button>
+                <button class="ghost-btn" type="button" id="exportRulesBtn">Export Rules JSON</button>
+                <button class="ghost-btn" type="button" id="exportCourseAssessmentsBtn">Export Course Assessments JSON</button>
+              </div>
+              <p class="note-text">GitHub Pages cannot write to repository files from the browser. Local edits are saved in Local Storage; export JSON and replace <code>data/assessment-rules.json</code> or <code>data/course-assessments.json</code> when official rules change.</p>
+            </article>
+
+            <article class="panel what-if-panel">
+              <div class="panel-head">
+                <h3>What Do I Need For AA?</h3>
+                <span>Updates instantly from remaining assessment cards</span>
+              </div>
+              <div class="target-need-card" id="targetNeedsCard"></div>
+              <div class="form-grid compact-controls advanced-grade-section">
+                <label>
+                  Target CGPA
+                  <input id="whatIfCgpaInput" type="number" min="0" max="10" step="0.1" value="8">
+                </label>
+                <label>
+                  Next Trimester Credits
+                  <input id="whatIfCreditsInput" type="number" min="1" step="1" value="24">
+                </label>
+              </div>
+              <div class="insight-grid" id="whatIfSummary"></div>
+            </article>
+
+            <article class="panel grade-scale-panel advanced-grade-section">
+              <div class="panel-head">
+                <h3>Absolute Grade Scale</h3>
+                <span>Configurable local thresholds</span>
+              </div>
+              <div class="table-wrap">
+                <table class="editable-table compact-table">
+                  <thead>
+                    <tr>
+                      <th>Grade</th>
+                      <th>Minimum %</th>
+                      <th>Point</th>
+                    </tr>
+                  </thead>
+                  <tbody id="gradeScaleRows"></tbody>
+                </table>
+              </div>
+              <p class="note-text">Courses may use relative grading. These thresholds are local estimates for planning and can be edited.</p>
+              <button class="ghost-btn" type="button" id="resetGradeScaleBtn">Reset Grade Scale</button>
+            </article>
+          </div>
+
+          <aside class="live-analytics-panel" id="liveAnalyticsPanel" aria-label="Live grade analytics" aria-live="polite">
+            <article class="panel live-results-card">
+              <div class="panel-head">
+                <h3>Live Result</h3>
+                <span id="weightHealth">Weights total 0%</span>
+              </div>
+              <div class="live-metric hero">
+                <span>Current Percentage</span>
+                <strong id="weightedScore">0%</strong>
+              </div>
+              <div class="live-result-grid">
+                <div class="live-metric">
+                  <span>Estimated Grade</span>
+                  <strong id="letterGrade">-</strong>
+                </div>
+                <div class="live-metric">
+                  <span>Grade Point</span>
+                  <strong id="gradePoint">0</strong>
+                </div>
+                <div class="live-metric">
+                  <span>CGPA Impact</span>
+                  <strong id="cgpaImpact">+0.00</strong>
+                </div>
+                <div class="live-metric">
+                  <span>Standing</span>
+                  <strong id="passFailStatus">-</strong>
+                </div>
+              </div>
+              <small id="passFailMessage">Official estimate</small>
+              <div class="component-contribution-list" id="componentContributions"></div>
+              <div class="dropped-box">
+                <span>Dropped Assessments</span>
+                <strong id="droppedAssessments">None</strong>
+              </div>
+              <div class="live-metric target">
+                <span>Target Gap</span>
+                <strong id="targetGap">0%</strong>
+                <small id="targetMessage">Enter scores to calculate</small>
+              </div>
+              <div class="progress-dashboard" id="progressDashboard"></div>
+              <div class="action-row stacked">
+                <button class="primary-btn" type="button" id="saveResultBtn">Save Record</button>
+                <button class="secondary-btn" type="button" id="resetPlanBtn">Reset Rules</button>
+                <button class="ghost-btn" type="button" id="duplicatePlanBtn">Save Local Template</button>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="comparison" aria-labelledby="comparisonHeading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Semester Comparison Dashboard</p>
+            <h2 id="comparisonHeading">Trimester performance matrix</h2>
+          </div>
+          <select id="comparisonFocus" aria-label="Focus trimester">
+            <option value="all">All trimesters</option>
+          </select>
+        </div>
+
+        <div class="analytics-grid">
+          <article class="panel chart-panel wide">
+            <div class="panel-head">
+              <h3>SGPA vs Course Load</h3>
+              <span>Weighted by credits</span>
+            </div>
+            <div class="chart-frame tall"><canvas id="comparisonChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>Forecast Curve</h3>
+              <span id="forecastLabel">Linear projection</span>
+            </div>
+            <div class="chart-frame"><canvas id="forecastChart"></canvas></div>
+          </article>
+        </div>
+
+        <div class="analytics-grid advanced-analytics-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3 id="primaryTrendTitle">Primary Component Trend</h3>
+              <span>Current course</span>
+            </div>
+            <div class="chart-frame"><canvas id="ptTrendChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3 id="secondaryTrendTitle">Secondary Component Trend</h3>
+              <span>Current course</span>
+            </div>
+            <div class="chart-frame"><canvas id="nptTrendChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>Assessment Comparison</h3>
+              <span>Active components</span>
+            </div>
+            <div class="chart-frame"><canvas id="assessmentComparisonChart"></canvas></div>
+          </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <h3>Weight Contribution</h3>
+              <span>Official engine</span>
+            </div>
+            <div class="chart-frame"><canvas id="contributionChart"></canvas></div>
+          </article>
+          <article class="panel wide">
+            <div class="panel-head">
+              <h3>Semester Performance Heatmap</h3>
+              <span>Score intensity by trimester</span>
+            </div>
+            <div class="heatmap-grid" id="semesterHeatmap"></div>
+          </article>
+          <article class="panel wide">
+            <div class="panel-head">
+              <h3>Risk & Forecast Dashboard</h3>
+              <span>Courses, trend, target pressure</span>
+            </div>
+            <div class="risk-forecast-grid" id="riskForecastDashboard"></div>
+          </article>
+        </div>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Semester Summary</h3>
+            <span id="semesterSummaryMeta">0 records</span>
+          </div>
+          <div class="semester-grid" id="semesterCards"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Target CGPA Predictor</h3>
+            <span>Required GPA planner</span>
+          </div>
+          <div class="form-grid">
+            <label>
+              Current CGPA
+              <input id="plannerCurrentCgpa" type="number" min="0" max="10" step="0.01">
+            </label>
+            <label>
+              Completed Credits
+              <input id="plannerCompletedCredits" type="number" min="0" step="1">
+            </label>
+            <label>
+              Target CGPA
+              <input id="plannerTargetCgpa" type="number" min="0" max="10" step="0.1">
+            </label>
+          </div>
+          <div class="insight-grid" id="targetCgpaPlanner"></div>
+        </article>
+      </section>
+
+      <section class="view" id="syllabus" aria-labelledby="syllabusHeading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Searchable Syllabus Viewer</p>
+            <h2 id="syllabusHeading">Curriculum explorer</h2>
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <label>
+            Search
+            <input id="syllabusSearch" type="search" placeholder="Topic, book, code, course">
+          </label>
+          <label>
+            Trimester
+            <select id="trimesterFilter">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label>
+            Course
+            <select id="courseFilter">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label>
+            Type
+            <select id="typeFilter">
+              <option value="all">All</option>
+              <option value="Compulsory">Compulsory</option>
+              <option value="Elective">Elective</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="syllabus-layout">
+          <div class="course-list" id="courseList"></div>
+          <article class="panel syllabus-detail" id="syllabusDetail"></article>
+        </div>
+      </section>
+
+      <section class="view" id="portfolio" aria-labelledby="portfolioHeading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Product Roadmap</p>
+            <h2 id="portfolioHeading">Future Roadmap</h2>
+          </div>
+        </div>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <div class="roadmap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 18c3-8 13-8 16 0" />
+                <path d="M7 17c2-4 8-4 10 0" />
+                <path d="M12 5v11" />
+                <path d="M9 8l3-3 3 3" />
+              </svg>
+            </div>
+            <span class="roadmap-kicker">Analytics</span>
+            <h3>Relative Grading</h3>
+            <p>Peer percentile simulations when anonymized cohort data is available.</p>
+          </article>
+          <article class="roadmap-card">
+            <div class="roadmap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 4h10v16H7z" />
+                <path d="M9 8h6" />
+                <path d="M9 12h4" />
+                <path d="M9 16h6" />
+              </svg>
+            </div>
+            <span class="roadmap-kicker">Planning</span>
+            <h3>Study Planner</h3>
+            <p>Calendar-free weekly plans stored locally for assessment preparation.</p>
+          </article>
+          <article class="roadmap-card">
+            <div class="roadmap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M5 5h9l5 5v9H5z" />
+                <path d="M14 5v5h5" />
+                <path d="M8 14h8" />
+                <path d="M8 17h5" />
+              </svg>
+            </div>
+            <span class="roadmap-kicker">Data</span>
+            <h3>Transcript Import</h3>
+            <p>Client-side CSV parsing for historical course records and SGPA history.</p>
+          </article>
+          <article class="roadmap-card">
+            <div class="roadmap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M12 4a4 4 0 0 1 4 4v2h2v10H6V10h2V8a4 4 0 0 1 4-4z" />
+                <path d="M9 10V8a3 3 0 0 1 6 0v2" />
+                <path d="M12 14v3" />
+              </svg>
+            </div>
+            <span class="roadmap-kicker">Quality</span>
+            <h3>Accessibility Audit</h3>
+            <p>Expanded keyboard, contrast, and screen-reader test coverage.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="data" aria-labelledby="dataHeading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Local Portfolio Data</p>
+            <h2 id="dataHeading">Profile, export, import</h2>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Student Profile</h3>
+              <span id="storageStatus">Saved locally</span>
+            </div>
+            <form class="profile-form" id="profileForm">
+              <label>
+                Name
+                <input id="studentName" type="text" autocomplete="name">
+              </label>
+              <label>
+                Roll / ID
+                <input id="studentId" type="text">
+              </label>
+              <label>
+                Target CGPA
+                <input id="targetCgpa" type="number" min="0" max="10" step="0.1">
+              </label>
+              <button class="primary-btn" type="submit">Save Profile</button>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Data Portability</h3>
+              <span>JSON and PDF</span>
+            </div>
+            <div class="button-grid">
+              <button class="secondary-btn" type="button" id="exportJsonBtn">Export JSON</button>
+              <label class="secondary-btn file-btn" for="importJsonInput">Import JSON</label>
+              <input id="importJsonInput" type="file" accept="application/json,.json" hidden>
+              <button class="secondary-btn" type="button" id="exportPdfBtn">Export PDF</button>
+              <button class="secondary-btn" type="button" id="printDashboardBtn">Print Dashboard</button>
+              <button class="secondary-btn" type="button" id="printReportBtn">Print Report</button>
+              <button class="secondary-btn" type="button" id="exportChartsPngBtn">Charts PNG</button>
+              <button class="secondary-btn" type="button" id="exportChartsJpegBtn">Charts JPEG</button>
+              <button class="secondary-btn" type="button" id="exportChartsSvgBtn">Charts SVG</button>
+              <button class="danger-btn" type="button" id="resetDemoBtn">Reset Demo Data</button>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h3>GitHub Pages</h3>
+              <span>Static deployment</span>
+            </div>
+            <div class="deploy-list">
+              <span>No backend</span>
+              <span>Relative asset paths</span>
+              <span>CDN charts and export tools</span>
+              <span>Offline cache after first load</span>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel records-panel">
+          <div class="panel-head">
+            <h3>Saved Course Results</h3>
+            <span id="recordsMeta">0 records</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Trimester</th>
+                  <th>Score</th>
+                  <th>Grade</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="recordsTable"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js?v=14"></script>
+</body>
+</html>

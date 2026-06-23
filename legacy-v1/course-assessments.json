@@ -1,0 +1,615 @@
+{
+  "version": "1.1.0",
+  "updatedAt": "2026-06-19",
+  "source": "Course-specific assessment maximum marks",
+  "_defaults": [
+    {
+      "id": "default-t1-t6",
+      "appliesTo": {
+        "trimesters": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "assessments": [
+        {
+          "id": "PT1",
+          "name": "PT1",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT2",
+          "name": "PT2",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT3",
+          "name": "PT3",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT4",
+          "name": "PT4",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT5",
+          "name": "PT5",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT6",
+          "name": "PT6",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 18,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "NPT1",
+          "name": "NPT1",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT2",
+          "name": "NPT2",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT3",
+          "name": "NPT3",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT4",
+          "name": "NPT4",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT5",
+          "name": "NPT5",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT6",
+          "name": "NPT6",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 2,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "default-t7-t9",
+      "appliesTo": {
+        "trimesters": [
+          7,
+          8,
+          9
+        ]
+      },
+      "assessments": [
+        {
+          "id": "NPT1",
+          "name": "NPT1",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT2",
+          "name": "NPT2",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT3",
+          "name": "NPT3",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT4",
+          "name": "NPT4",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT5",
+          "name": "NPT5",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT6",
+          "name": "NPT6",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT7",
+          "name": "NPT7",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT8",
+          "name": "NPT8",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT9",
+          "name": "NPT9",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT10",
+          "name": "NPT10",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT11",
+          "name": "NPT11",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "NPT12",
+          "name": "NPT12",
+          "type": "NPT",
+          "maxMarks": 10,
+          "studentScore": null,
+          "weight": 1,
+          "bestOfEligible": true,
+          "bestOfGroup": "NPT",
+          "enabled": true
+        },
+        {
+          "id": "PT1",
+          "name": "PT1",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 20,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "PT2",
+          "name": "PT2",
+          "type": "PT",
+          "maxMarks": 30,
+          "studentScore": null,
+          "weight": 20,
+          "bestOfEligible": true,
+          "bestOfGroup": "PT",
+          "enabled": true
+        },
+        {
+          "id": "ST1",
+          "name": "ST1",
+          "type": "ST",
+          "maxMarks": 100,
+          "studentScore": null,
+          "weight": 50,
+          "bestOfEligible": true,
+          "bestOfGroup": "ST",
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "DA105": {
+    "courseCode": "DA105",
+    "assessments": [
+      {
+        "id": "NPT1",
+        "name": "NPT1",
+        "type": "NPT",
+        "maxMarks": 40,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT1",
+        "name": "PT1",
+        "type": "PT",
+        "maxMarks": 35,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT2",
+        "name": "NPT2",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT2",
+        "name": "PT2",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT3",
+        "name": "NPT3",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT3",
+        "name": "PT3",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT4",
+        "name": "NPT4",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT4",
+        "name": "PT4",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT5",
+        "name": "NPT5",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT5",
+        "name": "PT5",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT6",
+        "name": "NPT6",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT6",
+        "name": "PT6",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      }
+    ],
+    "appliesTo": {
+      "trimesters": [
+        2
+      ]
+    }
+  },
+  "DA108": {
+    "courseCode": "DA108",
+    "assessments": [
+      {
+        "id": "NPT1",
+        "name": "NPT1",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT1",
+        "name": "PT1",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT2",
+        "name": "NPT2",
+        "type": "NPT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT2",
+        "name": "PT2",
+        "type": "PT",
+        "maxMarks": 20,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT3",
+        "name": "NPT3",
+        "type": "NPT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT3",
+        "name": "PT3",
+        "type": "PT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT4",
+        "name": "NPT4",
+        "type": "NPT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT4",
+        "name": "PT4",
+        "type": "PT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT5",
+        "name": "NPT5",
+        "type": "NPT",
+        "maxMarks": 10,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT5",
+        "name": "PT5",
+        "type": "PT",
+        "maxMarks": 10,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      },
+      {
+        "id": "NPT6",
+        "name": "NPT6",
+        "type": "NPT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 2,
+        "bestOfEligible": true,
+        "bestOfGroup": "NPT",
+        "enabled": true
+      },
+      {
+        "id": "PT6",
+        "name": "PT6",
+        "type": "PT",
+        "maxMarks": 15,
+        "studentScore": null,
+        "weight": 18,
+        "bestOfEligible": true,
+        "bestOfGroup": "PT",
+        "enabled": true
+      }
+    ],
+    "appliesTo": {
+      "trimesters": [
+        2
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*
+
+# Logs and temporary output
+*.log
+tmp/
+coverage/
+
+# Dependency folders are not required for this static app
+node_modules/
+dist/
+build/

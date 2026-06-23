@@ -1,0 +1,19 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Database
+sqlalchemy==2.0.36
+alembic==1.14.0
+psycopg[binary]==3.2.3
+
+# Auth (wired up in Phase 1.4 — included now so the dependency is pinned early)
+firebase-admin==6.6.0
+
+slowapi==0.1.10
+
+# Dev / test
+pytest==8.3.4
+httpx==0.28.1

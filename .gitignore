@@ -1,0 +1,42 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Environment files (never commit real secrets)
+.env
+.env.local
+backend/.env
+frontend/.env
+frontend/.env.local
+!*.env.example
+
+# Python
+__pycache__/
+**/__pycache__/
+backend/.venv/
+backend/venv/
+backend/*.egg-info/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Docker volumes are managed by Docker itself, not git
+pgdata/
+
+# Logs
+*.log
+tmp/
+
+# Build output
+dist/
+build/

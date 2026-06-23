@@ -1,0 +1,71 @@
+{
+  "version": "1.1.0",
+  "updatedAt": "2026-06-19",
+  "source": "Generic academic assessment planning template",
+  "componentDefinitions": {
+    "PT": "Proctored Test",
+    "NPT": "Non-Proctored Test",
+    "ST": "Summative Test"
+  },
+  "rules": [
+    {
+      "id": "academic-dsai-t1-t6",
+      "name": "Trimester 1 to Trimester 6 Evaluation",
+      "appliesTo": {
+        "trimesters": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "bestOfRules": [
+        {
+          "id": "pt-best-of",
+          "group": "PT",
+          "bestOf": 5,
+          "enabled": true
+        },
+        {
+          "id": "npt-best-of",
+          "group": "NPT",
+          "bestOf": 5,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "academic-dsai-t7-t9",
+      "name": "Trimester 7 to Trimester 9 Evaluation",
+      "appliesTo": {
+        "trimesters": [
+          7,
+          8,
+          9
+        ]
+      },
+      "bestOfRules": [
+        {
+          "id": "npt-best-of",
+          "group": "NPT",
+          "bestOf": 10,
+          "enabled": true
+        },
+        {
+          "id": "pt-best-of",
+          "group": "PT",
+          "bestOf": 2,
+          "enabled": true
+        },
+        {
+          "id": "st-best-of",
+          "group": "ST",
+          "bestOf": 1,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}
